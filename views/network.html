@@ -5,43 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Healthy food</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
-<!-- Vista splash -->
-<div id="splash">
+<!-- Escribir post -->
 
-</div>
-
-<!-- Inicio de sesión/registro -->
-<main id="main" class="hide register valign-wrapper">
-  <div class="row" >
-    <form class="col s12 l12">
-      <div class="row">
-        <div class="input-field col s10 offset-s1 l10 offset-l1">
-          <i class="material-icons prefix">mail_outline</i>
-          <input id="user-email" type="email" class="validate">
-          <label for="user-email" data-error="Ingresa un correo válido" data-success="Correcto">Correo electrónico</label>
-        </div>
-        <div class="input-field col s10 offset-s1 l10 offset-l1">
-          <i class="material-icons prefix">lock_outline</i>
-          <input id="user-password" type="password" class="validate">
-          <label for="user-password" data-error="Ingresa de 4 a 8 caracteres" data-success="Correcto">Contraseña</label>
-        </div>
-        <div class="col s8 offset-s2 mt-2">
-          <a href="views/network.html"> <button type="button" name="button" id="btn-login">Iniciar sesión</button></a>
-        </div>
+<section class="">
+  <div class=" row card-panel hoverable valign-wrapper" id="write-post-section">
+    <div class="col s1">
+      <div class="profile-photo">
       </div>
-      <div class="col s8 offset-s2 mt-10">
-        <a href="views/signup.html"><button type="button" name="button" id="btn-signup">Crear cuenta</button></a>
-      </div>
-    </form>
+    </div>
+    <div class="input-field col s7">
+      <textarea id="post-text" class="materialize-textarea" placeholder="¿En qué estás pensando?"></textarea>
+    </div>
+    <div class="col s4">
+      <button type="button" name="button" id="btn-send-post"><i class="material-icons prefix">send</i></button>
+      <button type="button" name="button" id="btn-add-photo-post"><i class="material-icons prefix">add_a_photo</i></button>
+    </div>
   </div>
-</main>
+</section>
 
 
+<!-- Newsfeed-->
+
+<section>
+  <div class="row">
+    <div class="col s12" id="show-post-section"></div>
+  </div>
+</section>
 
 
 
@@ -57,7 +51,7 @@
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-  <script type="text/javascript" src="js/app.js">
+  <script type="text/javascript" src="../js/app.js">
 
   </script>
 

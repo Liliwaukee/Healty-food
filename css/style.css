@@ -87,3 +87,40 @@ background: linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 1
 .mt-10 {
   margin-top: 10vh;
 }
+
+
+
+#write-post-section {
+  padding: 0;
+}
+
+#post-text {
+  padding: 0;
+}
+
+
+#show-post-section i{
+  color: #B8B8B8;
+  float: right;
+  margin-left: 0.6em;
+  width: 0.7em;
+}
+
+
+
+#show-post-section .clicked {
+  color: red;
+}
+
+.box-post {
+  background-color: white;
+}
+
+
+#show-post-section .card-panel-post p{
+  margin:  0;
+}
+
+.icons-post {
+  margin-bottom: 1vh;
+}
