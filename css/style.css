@@ -1,0 +1,89 @@
+body {
+  height: 100vh;
+  width: 100%;
+  background: url("../assets/img/breakfast.jpg");
+  background-size: cover;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+
+#splash {
+  background: #AAFFA9;
+  background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 1), rgba(170, 255, 169, 1));
+  background: linear-gradient(to bottom, rgba(17, 255, 189, 1), rgba(170, 255, 169, 1));
+  height: 100vh;
+  position: relative;
+  -webkit-animation-name: example;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */
+  -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {top: 100%;}
+    to {top: 0;}
+}
+
+@keyframes example {
+  from {top: 100%;}
+  to {top: 0;}
+}
+
+
+
+
+main {
+  background: url("../assets/img/breakfast.jpg");
+  background-size: cover;
+  height: 100vh;
+
+  /*filter: blur(6px);*/
+}
+
+.register, #main-login {
+  /*
+background: #AAFFA9;
+background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));
+background: linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));
+*/
+  background: rgba(25, 25, 25, 0.8);
+  color: white;
+  height: 100vh;
+
+}
+
+#btn-login, #btn-signup, #btn-login-network {
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+}
+
+#btn-login, #btn-login-network {
+  border: 2px solid #AAFFA9;
+  background: none;
+/*  border-top: 3px solid  rgba(17, 255, 189, 0.5);
+  border-bottom: 3px solid rgba(170, 255, 169, 0.5);*/
+}
+
+#btn-signup {
+  background: linear-gradient(-90deg, rgba(17, 255, 189, 0.9), rgba(170, 255, 169, 0.9));
+  border: none;
+  color: #484848;
+}
+
+.mt-2 {
+  margin-top: 2vh;
+}
+
+.mt-10 {
+  margin-top: 10vh;
+}
