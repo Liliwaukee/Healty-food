@@ -1,7 +1,7 @@
 
 function loadPage() {
 	splash();
-	//$("#btn-signup").click(signupView);
+
 }
 
 
@@ -13,11 +13,6 @@ function splash() {
         $('main').removeClass('hide');
 	 }, 3000);
 }
-
-function signupView() {
-
-}
-
 
 
 
