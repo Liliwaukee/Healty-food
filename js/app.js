@@ -2,6 +2,7 @@
 function loadPage() {
 	splash();
 
+	$('.collapsible').collapsible(); //Agregamos la funcionalidad a los collapse
 
 
 }
@@ -51,8 +52,30 @@ function showPost() {  //post-container
 
 }
 
+function calculateIMC() {
+	var $userHeight = $("#height-user").val();
+	var $userWeight = $("#weight-user").val();
+ 	var $userIMC = ($userWeight*10000) / (Math.pow($userHeight, 2));
+	$userIMC = $userIMC.toFixed(2);
 
+	if($userIMC <= 18.49) {
+		$("#user-imc").html($userIMC + " Delgadez");
+	} else if ($userIMC >= 18.5 || $userIMC <= 24.99) {
+		$("#user-imc").html($userIMC + " Peso normal");
+	} else if ($userIMC >= 25 || $userIMC <= 29.99) {
+		$("#user-imc").html($userIMC + " Sobrepeso");
+	} else if ($userIMC >= 30) {
+		$("#user-imc").html($userIMC + " Obesidad");
+	}
 
+	$(".collapsible-header").removeClass("active");
+	$("li").removeClass("active");
+	$(".collapsible-body").hide();
+	$("#height-user").val("");
+	$("#weight-user").val("");
+}
+
+$("#btn-calculate-imc").click(calculateIMC);
 
 
 
