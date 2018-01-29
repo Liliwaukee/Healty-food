@@ -5,13 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Healthy food</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body>
 
+<div id="profile-container">
+  <header class="header center-align">
+    <div class="row">
+      <div class="col s12">
+        <img src="../assets/img/logo-green.png" alt="" class="responsive-img logo-header">
+      </div>
+    </div>
+  </header>
 
+  <section id="user-profile-container">
+    <div class="row">
+      <div class="col s12">
+        <img src="../assets/img/fit.jpg" alt="" class="circle responsive-img" id="photo-profile">
+      </div>
+    </div>
+  </section>
+
+  <section id="user-profile-name">
+    <div class="row">
+      <div class="col s12"></div>
+    </div>
+  </section>
+
+  <section id="user-health">
+    <div class="row">
+      <div class="col s5 offset-s1" id="imc">
+        <span>IMC :</span>
+        <h5 id="user-imc"> -- </h5>
+      </div>
+      <div class="col s5" id="calories">
+        <span>Calories :</span>
+        <h5 id="user-calories"> -- </h5>
+      </div>
+      <div class="row">
+        <div class="col s5 offset-s1">
+          <button type="button" name="button" class="btn-outline">Calcular IMC</button>
+        </div>
+        <div class="col s5">
+          <button type="button" name="button" class="btn-outline">Calcular calorias</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>
 
 
 
@@ -28,7 +73,7 @@
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-  <script type="text/javascript" src="js/app.js">
+  <script type="text/javascript" src="../js/app.js">
 
   </script>
 

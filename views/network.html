@@ -10,34 +10,43 @@
 
 </head>
 <body>
-<!-- Escribir post -->
 
-<section class="">
-  <div class=" row card-panel hoverable valign-wrapper" id="write-post-section">
-    <div class="col s1">
-      <div class="profile-photo">
+<div id="network-container">
+  <!-- Escribir post -->
+  <header class="header center-align">
+    <div class="row">
+      <div class="col s12">
+        <img src="../assets/img/logo-green.png" alt="" class="responsive-img logo-header">
       </div>
     </div>
-    <div class="input-field col s7">
-      <textarea id="post-text" class="materialize-textarea" placeholder="¿En qué estás pensando?"></textarea>
+  </header>
+
+  <section class="">
+    <div class=" row card-panel hoverable valign-wrapper" id="write-post-section">
+      <div class="col s1">
+        <div class="profile-photo">
+        </div>
+      </div>
+      <div class="input-field col s7">
+        <textarea id="post-text" class="materialize-textarea" placeholder="¿En qué estás pensando?"></textarea>
+      </div>
+      <div class="col s4">
+        <button type="button" name="button" id="btn-send-post"><i class="material-icons prefix">send</i></button>
+        <button type="button" name="button" id="btn-add-photo-post"><i class="material-icons prefix">add_a_photo</i></button>
+      </div>
     </div>
-    <div class="col s4">
-      <button type="button" name="button" id="btn-send-post"><i class="material-icons prefix">send</i></button>
-      <button type="button" name="button" id="btn-add-photo-post"><i class="material-icons prefix">add_a_photo</i></button>
+  </section>
+
+
+  <!-- Newsfeed-->
+
+  <section>
+    <div class="row">
+      <div class="col s12" id="show-post-section"></div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- Newsfeed-->
-
-<section>
-  <div class="row">
-    <div class="col s12" id="show-post-section"></div>
-  </div>
-</section>
-
-
+</div>
 
 <!-- SCRIPTS -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
