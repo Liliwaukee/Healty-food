@@ -170,7 +170,7 @@ $("#btn-calculate-imc").click(clearCalculate);
 
 
 
-
+/*
 function archivo(evt) {
     var files = evt.target.files; // FileList object
 
@@ -194,8 +194,8 @@ function archivo(evt) {
 }
 
     document.getElementById('files').addEventListener('change', archivo, false);
+*/
 
-		
 
 $(document).ready(loadPage);
 
