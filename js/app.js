@@ -3,14 +3,14 @@ function loadPage() {
 
 	// Initialize Firebase
 	var config = {
-	 apiKey: "AIzaSyBZ-p4ytl3m8VPTii4HR-J6e8ixdMUkW1U",
-	 authDomain: "tarea-app-cb6fb.firebaseapp.com",
-	 databaseURL: "https://tarea-app-cb6fb.firebaseio.com",
-	 projectId: "tarea-app-cb6fb",
-	 storageBucket: "",
-	 messagingSenderId: "150229416992"
- };
- firebase.initializeApp(config);
+	apiKey: "AIzaSyCr8LE3tNU_HSJ4ntj8Dqpbc13Q_nDIC9U",
+	authDomain: "healthy-food-7f4d3.firebaseapp.com",
+	databaseURL: "https://healthy-food-7f4d3.firebaseio.com",
+	projectId: "healthy-food-7f4d3",
+	storageBucket: "healthy-food-7f4d3.appspot.com",
+	messagingSenderId: "1060724454978"
+};
+firebase.initializeApp(config);
 
 	var $btnGoogle = $("#btn-google")
 	$btnGoogle.click(function(){
