@@ -250,6 +250,12 @@ header {
 
 /*--UPLOAD FILES--*/
 
+#files {
+  background: linear-gradient(-90deg, rgba(17, 255, 189, 0.9), rgba(170, 255, 169, 0.9));
+  border: none;
+  color: #484848;
+  display: inline-block;
+}
 
 input[type=file]::-webkit-file-upload-button {
   border: 2px solid #AAFFA9;
