@@ -231,7 +231,7 @@ header {
 /*--imagenes--*/
 .thumb{
     height: 300px;
-    border: 1px solid #000;
+    text-align: center;
     margin: 10px 5px 0 0;
 }
 
@@ -245,4 +245,16 @@ header {
 
 #container-follow {
   background: linear-gradient(-90deg, rgba(17, 255, 189, 0.9), rgba(170, 255, 169, 0.9));
+}
+
+
+/*--UPLOAD FILES--*/
+
+
+input[type=file]::-webkit-file-upload-button {
+  border: 2px solid #AAFFA9;
+  background: none;
+  display: block;
+  margin: 0;
+  width: 100%;
 }

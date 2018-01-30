@@ -31,12 +31,6 @@ firebase.initializeApp(config);
 			indexView();
 			saveDataUser(result.user);
 
-
-			// This gives you a Google Access Token. You can use it to access the Google API.
-			//var token = result.credential.accessToken;
-			// The signed-in user info.
-			//var user = result.user;
-			// ...
 		}).catch(function(error) {
 			// Handle Errors here.
 			var errorCode = error.code;
@@ -45,10 +39,21 @@ firebase.initializeApp(config);
 			var email = error.email;
 			// The firebase.auth.AuthCredential type that was used.
 			var credential = error.credential;
-			// ...
+		});
+	}
+/*
+	function newUser() {
+		firebase.auth()
+		.createUserWithEmailAndPassword(email, password)
+		.catch(function(error) {
+		  // Handle Errors here.
+		  var errorCode = error.code;
+		  var errorMessage = error.message;
+		  // ...
 		});
 	}
 
+*/
 
 $('.collapsible').collapsible(); //Agregamos la funcionalidad a los collapse
 
@@ -115,6 +120,37 @@ function showPost() {  //post-container
 		$(this).siblings().removeClass("clicked");
 	});
 
+}
+
+function showImage(image) {  //post-container
+	var $postContent = $("#post-text").val();
+	var $postSection = $("#show-post-section");
+	var $post = $("<div />").addClass("card-panel card-panel-post");
+	var $postText = $("<p />").addClass("borderP");
+	var $post2 = $("<div />").addClass("icons-post");
+	var $iconLove = $("<i />").addClass("material-icons icon");
+	var $iconLike = $("<i />").addClass("material-icons icon");
+	var $iconDislike = $("<i />").addClass("material-icons icon");
+
+	$postText.html(image);
+	$iconDislike.text("thumb_down");
+	$iconLike.text("thumb_up");
+	$iconLove.text("favorite");
+
+	$post.append($postText);
+	$post2.append($iconDislike);
+	$post2.append($iconLike);
+	$post2.append($iconLove);
+	$postSection.append($post);
+	$post.append($post2);
+
+	$("#post-text").val(" "); //limpiamos el textarea
+
+	//los iconos se colorean cuando le das click
+	$(".icon").on("click",function(){
+		$(this).toggleClass("clicked");
+		$(this).siblings().removeClass("clicked");
+	});
 
 }
 
@@ -170,7 +206,7 @@ $("#btn-calculate-imc").click(clearCalculate);
 
 
 
-/*
+
 function archivo(evt) {
     var files = evt.target.files; // FileList object
 
@@ -186,7 +222,9 @@ function archivo(evt) {
          reader.onload = (function(theFile) {
              return function(e) {
              // Creamos la imagen.
-                    document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+
+						 showImage(
+						 ['<img class="thumb responsive-img" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join(''));
              };
          })(f);
          reader.readAsDataURL(f);
@@ -194,7 +232,7 @@ function archivo(evt) {
 }
 
     document.getElementById('files').addEventListener('change', archivo, false);
-*/
+
 
 
 $(document).ready(loadPage);
