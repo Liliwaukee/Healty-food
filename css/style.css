@@ -96,9 +96,7 @@ a:link {
 }
 
 
-#write-post-section {
-  padding: 0;
-}
+
 
 #post-text {
   padding: 0;
@@ -140,18 +138,47 @@ a:link {
 
 
 /*--HEADER--*/
-header {
+#header {
   /*background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));
   background: linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));*/
   box-sizing: border-box;
   background-color: #F8F8F8;
   height: 10vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .logo-header {
   padding-top: 1vh;
   width: 24vh;
 }
+
+
+/*--GREETING SECTION--*/
+#greeting {
+  background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 1), rgba(170, 255, 169, 1));
+  background: linear-gradient(to bottom, rgba(17, 255, 189, 1), rgba(170, 255, 169, 1));
+  height: 5vh;
+  margin-top: 10vh;
+  width: 100%;
+}
+
+
+/*--WRITE POST SECTION--*/
+
+#write-post-section {
+  height: 17vh;
+  margin-top: 1vh;
+  width: 100%;
+}
+
+#write-post-section .row{
+  margin-top: 0;
+  margin-bottom: 0.6em;
+  padding-top: 0;
+}
+
 
 
 /*--PROFILE SECTION--*/
@@ -254,13 +281,21 @@ header {
   background: linear-gradient(-90deg, rgba(17, 255, 189, 0.9), rgba(170, 255, 169, 0.9));
   border: none;
   color: #484848;
-  display: inline-block;
+  width: 100%;
 }
 
 input[type=file]::-webkit-file-upload-button {
   border: 2px solid #AAFFA9;
   background: none;
-  display: block;
   margin: 0;
+}
+
+#btn-send-post {
+  border: 2px solid #AAFFA9;
+  background: none;
+  box-shadow: 8px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: #30AC18;
+  margin: 0;
+  padding: 0;
   width: 100%;
 }
