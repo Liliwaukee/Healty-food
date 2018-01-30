@@ -12,14 +12,17 @@
 <body>
 
 <div id="profile-container">
+  <!-- Header-->
   <header class="header center-align">
     <div class="row">
       <div class="col s12">
-        <img src="../assets/img/logo-green.png" alt="" class="responsive-img logo-header">
+        <img src="../assets/img/logo-horizontal.png" alt="" class="responsive-img logo-header">
       </div>
     </div>
   </header>
 
+
+  <!-- Section-->
   <section id="user-profile-container">
     <div class="row">
       <div class="col s12">
@@ -40,18 +43,24 @@
         <span>IMC :</span>
         <h6 id="user-imc"> 00 </h6>
       </div>
-      <div class="col s5" id="calories">
-        <span>Calories :</span>
-        <h6 id="user-calories"> 00 </h6>
+      <div class="col s5" id="ideal-weight">
+        <span>Peso ideal :</span>
+        <h6 id="user-ideal-weight"> 00 </h6>
       </div>
       <div class="row">
         <div class="col s10 offset-s1">
           <!-- IMC collapsible-->
           <ul class="collapsible" data-collapsible="accordion">
             <li>
-              <div class="collapsible-header"><i class="material-icons">filter_drama</i>Calcular IMC</div>
+              <div class="collapsible-header"><i class="material-icons">loyalty</i>Calcular IMC y Calorias</div>
               <div class="collapsible-body">
                   <form>
+                    <p>
+                    <input name="group1" type="radio" id="user-woman" />
+                    <label for="user-woman">Mujer</label>
+                    <input name="group1" type="radio" id="user-man" />
+                    <label for="user-man">Hombre</label>
+                    </p>
                     <label for="height-user">Ingresa tu altura en centímetros</label>
                     <input type="number" id="height-user" placeholder="ej. 165">
                     <label for="weight-user">Ingresa tu peso en kilográmos</label>
@@ -75,14 +84,17 @@
   <nav class="nav-bottom">
     <div class="row">
       <div class="col s12 center-align">
-        <div class="col s4">
-          <a href="network.html"><i class="material-icons prefix">home</i></a>
+        <div class="col s3">
+          <a href="views/network.html"><i class="material-icons prefix">home</i></a>
         </div>
-        <div class="col s4">
-          <a href="follow.html"><i class="material-icons prefix">person_add</i></a>
+        <div class="col s3">
+          <a href="views/network.html"><i class="material-icons prefix">comment</i></a>
         </div>
-        <div class="col s4">
-          <a href="profile.html"><i class="material-icons prefix">person</i></a>
+        <div class="col s3">
+          <a href="views/follow.html"><i class="material-icons prefix">person_add</i></a>
+        </div>
+        <div class="col s3">
+          <a href="views/profile.html"><i class="material-icons prefix">person</i></a>
         </div>
       </div>
     </div>
@@ -92,10 +104,16 @@
 
 
 
-
 <!-- SCRIPTS -->
 
-  <!-- jQuery -->
+  <!-- firabase -->
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+
+
+  <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
   <!-- Compiled and minified CSS -->
@@ -104,9 +122,9 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-  <script type="text/javascript" src="../js/app.js">
 
-  </script>
+  <script type="text/javascript" src="../js/app.js"></script>
+
 
 
 </body>

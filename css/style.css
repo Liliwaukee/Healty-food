@@ -1,8 +1,6 @@
 body {
   height: 100vh;
   width: 100%;
-  background: url("../assets/img/breakfast.jpg");
-  background-size: cover;
 }
 
 a:link {
@@ -39,26 +37,28 @@ a:link {
 
 
 
+/*--REGISTER SECTION*/
 
-main {
+#main {
   background: url("../assets/img/breakfast.jpg");
   background-size: cover;
-  height: 100vh;
-
-  /*filter: blur(6px);*/
 }
 
-.register, #main-login {
-  /*
-background: #AAFFA9;
-background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));
-background: linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));
-*/
-  background: rgba(25, 25, 25, 0.8);
+#container-main {
+
+  background-color: rgba(25, 25, 25, 0.8);
   color: white;
   height: 100vh;
-
 }
+/*
+#main, .register, {
+  background-color: rgba(25, 25, 25, 0.8);
+  color: white;
+  height: 100vh;
+}
+*/
+
+
 
 #btn-login, #btn-signup, #btn-login-network {
   border-radius: 5px;
@@ -141,13 +141,16 @@ background: linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 1
 
 /*--HEADER--*/
 header {
-  background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));
-  background: linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));
+  /*background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));
+  background: linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));*/
+  box-sizing: border-box;
+  background-color: #F8F8F8;
   height: 10vh;
 }
 
 .logo-header {
-  width: 26vh;
+  padding-top: 1vh;
+  width: 24vh;
 }
 
 
@@ -192,7 +195,7 @@ header {
 }
 
 
-#calories {
+#ideal-weight {
   background-color: #AAFFA9;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -209,15 +212,24 @@ header {
 /*--NAV--*/
 
 .nav-bottom {
+  box-sizing: border-box;
   background-color: white;
-  border:none;
-  border-bottom: 2px solid #AAFFA9;
+  border: none;
+  border-bottom: 2px solid #30AC18;
   height: 8vh;
   position: fixed;
   top: 92vh;
+  box-shadow: 8px 4px 8px 0 rgba(0, 0, 0, 0.4), 10px 6px 20px 0 rgba(0, 0, 0, 0.27);
 }
 
 .nav-bottom i {
   text-shadow: 2px 2px 4px #C0C0C0;
-  color: #4E3326;
+  color: #707070;
+}
+
+/*--imagenes--*/
+.thumb{
+    height: 300px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
 }

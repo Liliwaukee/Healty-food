@@ -20,39 +20,117 @@
   </div>
 
   <!-- Inicio de sesión/registro -->
-  <main id="main" class="hide register valign-wrapper">
-    <div class="row" >
-      <div class="col s12 center-align">
-        <img src="assets/img/logo-sin-fondo.png" alt="" class="responsive-img logo-form">
+  <main id="main" class="hide">
+    <div id="container-main" class=" valign-wrapper">
+      <div class="row background">
+        <div class="col s12 center-align">
+          <img src="assets/img/logo-sin-fondo.png" alt="" class="responsive-img logo-form">
+        </div>
+        <form class="col s12 l12">
+          <div class="row">
+            <div class="input-field col s10 offset-s1 l10 offset-l1">
+              <i class="material-icons prefix">mail_outline</i>
+              <input id="user-email" type="email" class="validate">
+              <label for="user-email" data-error="Ingresa un correo válido" data-success="Correcto">Correo electrónico</label>
+            </div>
+            <div class="input-field col s10 offset-s1 l10 offset-l1">
+              <i class="material-icons prefix">lock_outline</i>
+              <input id="user-password" type="password" class="validate">
+              <label for="user-password" data-error="Ingresa de 4 a 8 caracteres" data-success="Correcto">Contraseña</label>
+            </div>
+            <div class="col s8 offset-s2 mt-2">
+              <button type="button" name="button" id="btn-google" class="btn-outline">Iniciar con Google</button>
+            </div>
+          </div>
+          <div class="col s8 offset-s2 mt-10">
+            <a href="views/signup.html"><button type="button" name="button" id="btn-signup">Crear cuenta</button></a>
+          </div>
+        </form>
       </div>
-      <form class="col s12 l12">
-        <div class="row">
-          <div class="input-field col s10 offset-s1 l10 offset-l1">
-            <i class="material-icons prefix">mail_outline</i>
-            <input id="user-email" type="email" class="validate">
-            <label for="user-email" data-error="Ingresa un correo válido" data-success="Correcto">Correo electrónico</label>
-          </div>
-          <div class="input-field col s10 offset-s1 l10 offset-l1">
-            <i class="material-icons prefix">lock_outline</i>
-            <input id="user-password" type="password" class="validate">
-            <label for="user-password" data-error="Ingresa de 4 a 8 caracteres" data-success="Correcto">Contraseña</label>
-          </div>
-          <div class="col s8 offset-s2 mt-2">
-            <a href="views/network.html"> <button type="button" name="button" id="btn-login">Iniciar sesión</button></a>
-          </div>
-        </div>
-        <div class="col s8 offset-s2 mt-10">
-          <a href="views/signup.html"><button type="button" name="button" id="btn-signup">Crear cuenta</button></a>
-        </div>
-      </form>
     </div>
   </main>
 
+
+<!--Principal view-->
+  <div id="network-container" class="">
+    <!-- Header-->
+    <header class="header center-align">
+      <div class="row">
+        <div class="col s12">
+          <img src="assets/img/logo-horizontal.png" alt="" class="responsive-img logo-header">
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Escribir post -->
+    <section class="">
+      <div class=" row card-panel hoverable valign-wrapper" id="write-post-section">
+        <div class="col s1">
+          <div class="profile-photo">
+          </div>
+        </div>
+        <div class="input-field col s7">
+          <textarea id="post-text" class="materialize-textarea" placeholder="¿En qué estás pensando?"></textarea>
+        </div>
+        <div class="col s4">
+          <button type="button" name="button" id="btn-send-post"><i class="material-icons prefix">send</i></button>
+          <button type="button" name="button" id="btn-add-photo-post"><i class="material-icons prefix">add_a_photo</i></button>
+        </div>
+      </div>
+    </section>
+
+
+<!--imagenes-->
+
+<input type="file" id="files" name="files[]" />
+        <br />
+        <output id="list"></output>
+
+
+
+    <!-- Newsfeed-->
+    <section>
+      <div class="row">
+        <div class="col s12" id="show-post-section"></div>
+      </div>
+    </section>
+
+    <!-- Nav-->
+    <nav class="nav-bottom">
+      <div class="row">
+        <div class="col s12 center-align">
+          <div class="col s3">
+            <a href="views/network.html"><i class="material-icons prefix">home</i></a>
+          </div>
+          <div class="col s3">
+            <a href="views/network.html"><i class="material-icons prefix">comment</i></a>
+          </div>
+          <div class="col s3">
+            <a href="views/follow.html"><i class="material-icons prefix">person_add</i></a>
+          </div>
+          <div class="col s3">
+            <a href="views/profile.html"><i class="material-icons prefix">person</i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </div>
 
 
 
 
 <!-- SCRIPTS -->
+
+  <!-- firabase -->
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+
+
+  <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
   <!-- Compiled and minified CSS -->
@@ -61,12 +139,8 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-  <script type="text/javascript" src="js/app.js">
-
-  </script>
+  <script type="text/javascript" src="js/app.js"></script>
 
 
 </body>
