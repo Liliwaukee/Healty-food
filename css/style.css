@@ -234,3 +234,15 @@ header {
     border: 1px solid #000;
     margin: 10px 5px 0 0;
 }
+
+
+/*--follow--*/
+#btn-follow {
+  background: linear-gradient(-90deg, rgba(17, 255, 189, 0.9), rgba(170, 255, 169, 0.9));
+  border: none;
+  color: #484848;
+}
+
+#container-follow {
+  background: linear-gradient(-90deg, rgba(17, 255, 189, 0.9), rgba(170, 255, 169, 0.9));
+}
