@@ -68,8 +68,6 @@ hr {
 #btn-login, #btn-login-network {
   border: 2px solid #AAFFA9;
   background: none;
-/*  border-top: 3px solid  rgba(17, 255, 189, 0.5);
-  border-bottom: 3px solid rgba(170, 255, 169, 0.5);*/
 }
 
 #btn-signup {
