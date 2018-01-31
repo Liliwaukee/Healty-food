@@ -30,22 +30,30 @@
           <div class="row">
             <div class="input-field col s10 offset-s1 l10 offset-l1">
               <i class="material-icons prefix">mail_outline</i>
-              <input id="user-email" type="email" class="validate">
-              <label for="user-email" data-error="Ingresa un correo válido" data-success="Correcto">Correo electrónico</label>
+              <input id="user-email-login" type="email" class="validate">
+              <label for="user-email-login" data-error="Ingresa un correo válido" data-success="Correcto">Correo electrónico</label>
             </div>
             <div class="input-field col s10 offset-s1 l10 offset-l1">
               <i class="material-icons prefix">lock_outline</i>
-              <input id="user-password" type="password" class="validate">
-              <label for="user-password" data-error="Ingresa de 4 a 8 caracteres" data-success="Correcto">Contraseña</label>
+              <input id="user-password-login" type="password" class="validate">
+              <label for="user-password-login" data-error="Ingresa de 4 a 8 caracteres" data-success="Correcto">Contraseña</label>
             </div>
             <div class="col s8 offset-s2 mt-2">
-              <button type="button" name="button" id="btn-google" class="btn-outline">Iniciar con Google</button>
+              <button type="button" name="button" id="btn-mail-access" class="btn-outline">Entrar</button>
             </div>
           </div>
-          <div class="col s8 offset-s2 mt-10">
-            <a href="views/signup.html"><button type="button" name="button" id="btn-signup">Crear cuenta</button></a>
-          </div>
+
         </form>
+
+        <div class="col s8 offset-s2 mt-2">
+          <button type="button" name="button" id="btn-google" class="btn-outline">Iniciar con Google</button>
+        </div>
+
+        <div class="col s8 offset-s2 mt-10">
+          <a href="views/signup.html"><button type="button" name="button" id="btn-signup">Crear cuenta</button></a>
+        </div>
+
+
       </div>
     </div>
   </main>

@@ -41,21 +41,10 @@ firebase.initializeApp(config);
 			var credential = error.credential;
 		});
 	}
-/*
-	function newUser() {
-		firebase.auth()
-		.createUserWithEmailAndPassword(email, password)
-		.catch(function(error) {
-		  // Handle Errors here.
-		  var errorCode = error.code;
-		  var errorMessage = error.message;
-		  // ...
-		});
-	}
 
-*/
-
-$('.collapsible').collapsible(); //Agregamos la funcionalidad a los collapse
+	$("#btn-signup").click(signupWithMail); //Botón que llama a la función de registrar usuario con email y contraseña
+	$("#btn-mail-access").click(loginWithMail); //Botón que llama a la función de accesar con mail
+	$('.collapsible').collapsible(); //Agregamos la funcionalidad a los collapse
 
 
 }
@@ -73,6 +62,59 @@ function saveDataUser(user) {
 }
 
 
+//FUNCIÓN PARA REGISTRAR UN USUARIO NUEVO CON EMAIL Y CONTRASEÑA
+function signupWithMail() {
+	var $signupEmail = $("#signup-email").val();
+	var $signupPassword = $("signup-password").val();
+	console.log($signupEmail);
+	console.log($signupPassword);
+	firebase.auth().createUserWithEmailAndPassword($signupEmail, $signupPassword)
+	.catch(function(error) {
+	  // Handle Errors here.
+	  var errorCode = error.code;
+	  var errorMessage = error.message;
+	  // ...
+	});
+
+}
+
+
+//FUNCIÓN PARA INGRESAR CON EMAIL Y CONSTRASEÑA
+function loginWithMail() {
+	var $loginEmail = $("user-email-login").val();
+	var $loginPassword = $("user-password-login").val();
+
+		firebase.auth().signInWithEmailAndPassword($loginEmail, $loginPassword)
+		.catch(function(error) {
+	  // Handle Errors here.
+	  var errorCode = error.code;
+	  var errorMessage = error.message;
+	  // ...
+	});
+}
+
+/*
+//FUNCIÓN PARA GUARDAR LA INFORMACIÓN DE LOS USUARIOS REGISTRADOS CON EMAIL
+function dataUserHealthy() {
+		firebase.auth().onAuthStateChanged(function(user) {
+	  if (user) {
+	    // User is signed in.
+	    var displayName = user.displayName;
+	    var email = user.email;
+	    var emailVerified = user.emailVerified;
+	    var photoURL = user.photoURL;
+	    var isAnonymous = user.isAnonymous;
+	    var uid = user.uid;
+	    var providerData = user.providerData;
+	    // ...
+	  } else {
+	    // User is signed out.
+	    // ...
+	  }
+	});
+}
+dataUserHealthy(); //Llamamos a la función
+*/
 
 // FUNCIÓN QUE SE ACTIVA CON EL LOGIN DE GOOGLE / OCULTA EL REGISTRO Y MUESTRA LA VISTA PRINCIPAL
 function indexView() {
@@ -119,8 +161,10 @@ function showPost() {  //post-container
 		$(this).toggleClass("clicked");
 		$(this).siblings().removeClass("clicked");
 	});
-
 }
+
+$("#btn-send-post").click(showPost); //Llama a la función que muestra los post
+
 
 function showImage(image) {  //post-container
 	var $postContent = $("#post-text").val();
@@ -205,8 +249,6 @@ $("#btn-calculate-imc").click(clearCalculate);
 
 
 
-
-
 function archivo(evt) {
     var files = evt.target.files; // FileList object
 
@@ -236,6 +278,3 @@ function archivo(evt) {
 
 
 $(document).ready(loadPage);
-
-
-$("#btn-send-post").click(showPost); //Llama a la función que muestra los post
