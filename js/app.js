@@ -28,7 +28,7 @@ firebase.initializeApp(config);
 			.signInWithPopup(provider)
 			.then(function(result) {
 
-			window.location.href = "../views/principal.html";
+			window.location.href = "views/principal.html";
 			saveDataUser(result.user);
 
 		}).catch(function(error) {
@@ -71,7 +71,7 @@ function signupWithMail() {
 	firebase.auth()
 	.createUserWithEmailAndPassword($signupEmail, $signupPassword)
 	.then(function(result){
-		window.location.href = "../views/principal.html";
+		window.location.href = "views/principal.html";
 	})
 	.catch(function(error) {
   // Handle Errors here.
@@ -92,7 +92,7 @@ function loginWithMail() {
 
 		firebase.auth().signInWithEmailAndPassword($loginEmail, $loginPassword)
 		.then(function(result){
-			window.location.href = "../views/principal.html";
+			window.location.href = "views/principal.html";
 		})
 		.catch(function(error) {
 	  // Handle Errors here.
@@ -261,7 +261,7 @@ $("#btn-calculate-imc").click(clearCalculate);
 function closeSession() {
 		firebase.auth().signOut()
 		.then(function(result) {
-	window.location.href = "../index.html";
+	window.location.href = "index.html";
 	})
 
 
