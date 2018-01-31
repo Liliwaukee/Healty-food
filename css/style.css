@@ -8,6 +8,10 @@ a:link {
   color: white;
 }
 
+hr {
+  border-top: 1px solid #AAFFA9;
+}
+
 #splash {
   background: #AAFFA9;
   background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 0.8), rgba(170, 255, 169, 0.8));
@@ -102,6 +106,11 @@ a:link {
   padding: 0;
 }
 
+#show-post-section {
+  background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 0.2), rgba(170, 255, 169, 0.2));
+  background: linear-gradient(to bottom, rgba(17, 255, 189, 0.2), rgba(170, 255, 169, 0.2));
+}
+
 
 #show-post-section i{
   color: #B8B8B8;
@@ -111,42 +120,41 @@ a:link {
 }
 
 
-
 #show-post-section .clicked {
   color: #30AC18;
+}
+
+#show-post-section .card-panel-post p{
+  margin:  0;
 }
 
 .box-post {
   background-color: white;
 }
 
-
-#show-post-section .card-panel-post p{
-  margin:  0;
-}
-
 .icons-post {
   margin-bottom: 1vh;
 }
 
+
+
 /*--NETWORK SECTION*/
 
 #network-container {
-  background-color: white;
   padding-bottom: 8vh;
 }
 
 
 /*--HEADER--*/
 #header {
-  /*background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));
-  background: linear-gradient(to bottom, rgba(17, 255, 189, 0.5), rgba(170, 255, 169, 0.5));*/
-  box-sizing: border-box;
   background-color: #F8F8F8;
+  box-sizing: border-box;
+  box-shadow:  0 6px 10px 0 rgba(0, 0, 0, 0.05);
   height: 10vh;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
 
 .logo-header {
@@ -157,11 +165,24 @@ a:link {
 
 /*--GREETING SECTION--*/
 #greeting {
-  background: -webkit-linear-gradient(to bottom, rgba(17, 255, 189, 1), rgba(170, 255, 169, 1));
-  background: linear-gradient(to bottom, rgba(17, 255, 189, 1), rgba(170, 255, 169, 1));
-  height: 5vh;
-  margin-top: 10vh;
+  background-color: white;
+  border-left: 4px solid #11FFBD;
+  height: 10vh;
+  margin-top: 11vh;
+  padding: 0.5vh 0 0 1vh;
   width: 100%;
+}
+
+#greeting-msg {
+  color: #30AC18;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-left: 0.5em;
+}
+
+.profile-photo {
+  box-shadow: 6px 4px 6px 0 rgba(0, 0, 0, 0.3);
 }
 
 
@@ -170,6 +191,7 @@ a:link {
 #write-post-section {
   height: 17vh;
   margin-top: 1vh;
+  margin-bottom: 0;
   width: 100%;
 }
 

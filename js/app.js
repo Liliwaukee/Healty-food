@@ -42,7 +42,7 @@ firebase.initializeApp(config);
 		});
 	}
 
-	$("#btn-signup").click(signupWithMail); //Botón que llama a la función de registrar usuario con email y contraseña
+	$("#btn-signup-network").click(signupWithMail); //Botón que llama a la función de registrar usuario con email y contraseña
 	$("#btn-mail-access").click(loginWithMail); //Botón que llama a la función de accesar con mail
 	$('.collapsible').collapsible(); //Agregamos la funcionalidad a los collapse
 
@@ -65,24 +65,26 @@ function saveDataUser(user) {
 //FUNCIÓN PARA REGISTRAR UN USUARIO NUEVO CON EMAIL Y CONTRASEÑA
 function signupWithMail() {
 	var $signupEmail = $("#signup-email").val();
-	var $signupPassword = $("signup-password").val();
-	console.log($signupEmail);
-	console.log($signupPassword);
-	firebase.auth().createUserWithEmailAndPassword($signupEmail, $signupPassword)
-	.catch(function(error) {
-	  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  // ...
-	});
+	var $signupPassword = $("#signup-password").val();
+
+
+
+	firebase.auth().createUserWithEmailAndPassword($signupEmail, $signupPassword).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+
+
 
 }
 
 
 //FUNCIÓN PARA INGRESAR CON EMAIL Y CONSTRASEÑA
 function loginWithMail() {
-	var $loginEmail = $("user-email-login").val();
-	var $loginPassword = $("user-password-login").val();
+	var $loginEmail = $("#user-email-login").val();
+	var $loginPassword = $("#user-password-login").val();
 
 		firebase.auth().signInWithEmailAndPassword($loginEmail, $loginPassword)
 		.catch(function(error) {
@@ -91,6 +93,7 @@ function loginWithMail() {
 	  var errorMessage = error.message;
 	  // ...
 	});
+	console.log("entraste");
 }
 
 /*
@@ -161,7 +164,13 @@ function showPost() {  //post-container
 		$(this).toggleClass("clicked");
 		$(this).siblings().removeClass("clicked");
 	});
+
 }
+
+$(".icon").on("click",function(){
+	$(this).toggleClass("clicked");
+	$(this).siblings().removeClass("clicked");
+});
 
 $("#btn-send-post").click(showPost); //Llama a la función que muestra los post
 
