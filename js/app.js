@@ -28,7 +28,7 @@ firebase.initializeApp(config);
 			.signInWithPopup(provider)
 			.then(function(result) {
 
-			indexView();
+			window.location.href = "../views/principal.html";
 			saveDataUser(result.user);
 
 		}).catch(function(error) {
@@ -68,8 +68,12 @@ function signupWithMail() {
 	var $signupPassword = $("#signup-password").val();
 
 
-
-	firebase.auth().createUserWithEmailAndPassword($signupEmail, $signupPassword).catch(function(error) {
+	firebase.auth()
+	.createUserWithEmailAndPassword($signupEmail, $signupPassword)
+	.then(function(result){
+		window.location.href = "../views/principal.html";
+	})
+	.catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
@@ -87,13 +91,16 @@ function loginWithMail() {
 	var $loginPassword = $("#user-password-login").val();
 
 		firebase.auth().signInWithEmailAndPassword($loginEmail, $loginPassword)
+		.then(function(result){
+			window.location.href = "../views/principal.html";
+		})
 		.catch(function(error) {
 	  // Handle Errors here.
 	  var errorCode = error.code;
 	  var errorMessage = error.message;
 	  // ...
 	});
-	console.log("entraste");
+
 }
 
 /*
@@ -119,12 +126,7 @@ function dataUserHealthy() {
 dataUserHealthy(); //Llamamos a la función
 */
 
-// FUNCIÓN QUE SE ACTIVA CON EL LOGIN DE GOOGLE / OCULTA EL REGISTRO Y MUESTRA LA VISTA PRINCIPAL
-function indexView() {
 
-				$("#network-container").removeClass("hide");
-				$("main").hide();
-}
 
 // FUNCIÓN PARA LA VISTA SPLASH AL CARGAR LA APP
 function splash() {

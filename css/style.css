@@ -43,25 +43,20 @@ hr {
 
 /*--REGISTER SECTION*/
 
-#main {
+.main {
   background: url("../assets/img/breakfast.jpg");
   background-size: cover;
 }
 
-#container-main {
+.signup {
+  height: 100vh;
+}
 
+.container-main {
   background-color: rgba(25, 25, 25, 0.8);
   color: white;
   height: 100vh;
 }
-/*
-#main, .register, {
-  background-color: rgba(25, 25, 25, 0.8);
-  color: white;
-  height: 100vh;
-}
-*/
-
 
 
 #btn-login, #btn-signup, #btn-login-network {
@@ -87,8 +82,8 @@ hr {
   margin-top: 2vh;
 }
 
-.mt-10 {
-  margin-top: 10vh;
+.mt-7 {
+  margin-top: 7vh;
 }
 
 .logo-form {
@@ -96,6 +91,7 @@ hr {
 }
 
 .logo-signup {
+  margin: 10vh 0;
   width: 10vh;
 }
 
@@ -249,13 +245,21 @@ hr {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+#btn-google img{
+  border-radius: 5px;
+  width: 100%;
+}
+
 .btn-outline {
   border: 2px solid #AAFFA9;
   background: none;
+  border-radius: 5px;
   display: block;
   margin: 0;
   width: 100%;
 }
+
+
 
 
 /*--NAV--*/
