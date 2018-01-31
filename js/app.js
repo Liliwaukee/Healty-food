@@ -258,7 +258,16 @@ $("#btn-calculate-imc").click(calculateWeight);
 $("#btn-calculate-imc").click(clearCalculate);
 
 
+function closeSession() {
+		firebase.auth().signOut()
+		.then(function(result) {
+	window.location.href = "../index.html";
+	})
 
+
+		.catch()
+}
+$("#close-session").click(closeSession);
 
 function archivo(evt) {
     var files = evt.target.files; // FileList object
@@ -283,7 +292,11 @@ function archivo(evt) {
          reader.readAsDataURL(f);
      }
 }
-  //  $("files").on('change', archivo, false);
+
+//document.getElementById('files').addEventListener('change', archivo, false);
+
+
+
 
 
 
