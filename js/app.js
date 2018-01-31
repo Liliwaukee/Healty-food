@@ -281,8 +281,7 @@ function archivo(evt) {
          reader.readAsDataURL(f);
      }
 }
-
-    document.getElementById('files').addEventListener('change', archivo, false);
+  //  $("files").on('change', archivo, false);
 
 
 
